@@ -1,0 +1,136 @@
+﻿<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LWalden Projects</title>
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/font-awesome.min.css" rel="stylesheet" />
+    <link href="Content/styles.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="jumbotron">
+        <h1>A Simple Guide to hosting a Website on GitHub</h1>
+        <p>Create a portfolio website and host your frontend apps on GitHub with a few simple steps.</p>
+    </div>
+    <div class="container clearfix">
+        <section class="well">
+            <div class="row">
+                <div class="col-sm-8">
+                    <div class="well">
+                        <h3>What Are GitHub Pages?</h3>
+                        <p>GitHub pages are free way to host your webpages and frontend apps. Each GitHub page you make will host content from an associated repo. Pages come in two types: User & Organization Pages, and Project Pages.</p>
+                        <br />
+                        <br />
+                        <h4>User & Organization Page</h4>
+                        <ul>
+                            <li>This is your main wesite/app/webpage. Any other projects/apps/sites you create will be subdomains of this page and will be Project Pages.</li>
+                            <li>Only one User and Organization Page is allowed per account.</li>
+                            <li>Your repo must be named <code>username.github.io</code>. Make sure you use your exact GitHub username.</li>
+                            <li>The page will be served under the address <em>username.github.io</em></li>
+                        </ul>
+                        <br />
+                        <br />
+                        <h4>Project Pages</h4>
+                        <ul>
+                            <li>You can have any number of Project Pages.</li>
+                            <li>You will need to create a "gh-pages" branch of a repo in order to make it a Project Page.</li>
+                            <li>Project Pages are served under subpaths of the User Page like so: <em>username.github.io/projectname</em></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="well">
+                        <h3>Tips</h3>
+                        <ul>
+                            <li>Read more about GitHub Pages on <a href="https://help.github.com/categories/20/articles" target="_blank">GitHub Pages Help</a></li>
+                            <li>GitHub Pages are served over HTTP not HTTPS.</li>
+                        </ul>
+                    </div>
+                    <div class="well">
+                        <h3>Keep in Mind</h3>
+                        <p>
+                            GitHub is generally suitable for hosting frontend apps that only run in the browser. It will not run server-side code or provide a SQL database.<br />
+                            You <strong>can</strong> use Angular, jQuery, and other Javascript frameworks. You <strong>can</strong> use AJAX calls to connect to firebase or other remote servers.<br />
+                            You <strong>can</strong> include images, pdfs, and other content related files in your repo and link to them in your HTML.<br />
+                            Search Google for suggestions on getting your server side code live on the web, that topic is outside the scope of this guide.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="well">
+            <div class="row">
+                <div class="col-sm-8">
+                    <div class="well">
+                        <h3>How To Setup a User Page</h3>
+                        <ol>
+                            <li>Add a new repo, and name it <code>username.github.io</code>. <code>username</code> should be your username.</li>
+                            <li>
+                                Add the files that will make up your site to GitHub.
+                                <ul>
+                                    <li>If you are using Visual Studios you can connect your solution to your repo in the usual way.</li>
+                                    <li>Otherwise use a version of Git (command line, for Windows, etc.) to clone a local copy of the repo to hold your site's files.</li>
+                                </ul>
+                            </li>
+                            <li>Thats it, your site is now hosted! There may be a delay of up to ten minutes before your page is accessable on the web.</li>
+                            <li>Once your site is ready you can naviage to http://username.github.io to view your User Page.</li>
+                            <li>In the repo for your User Page, just above the list of contents, you can add a description and website link for the live site.</li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="well">
+                        <h3>Tips</h3>
+                        <ul>
+                            <li>Make sure to check intenal links (href, src, script tags, etc.) to ensure they are all working.</li>
+                            <li>If you are using relative paths you may need to make slight adjustments to find your targets.</li>
+                            <li>Unlike a Project Page, the User Page's content is based off the master branch. You do not need to make a gh-pages branch.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="well">
+            <div class="row">
+                <div class="col-sm-8">
+                    <div class="well">
+                        <h3>How To Setup a Project Page</h3>
+                        <ol>
+                            <li>Create a repo and add the files your app needs.</li>
+                            <li>The name of your repo will be used in the URL to access you site.  The url will look like: <em>username.github.io/project_page_repo_name</em></li>
+                            <li>
+                                Your site will not be live (accessable by it's URL) until you create a new branch called "gh-pages".
+                                <ul>
+                                    <li>From the repo for your project, click on button: "branch: master". In the textbox that drops down type <code>gh-pages</code> and press enter.</li>
+                                    <li>A new branch will be created and your page will be accessable in a browser within ten minutes using its URL.</li>
+                                </ul>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="well">
+                        <h3>Tips</h3>
+                        <ul>
+                            <li>Remember: Only changes to the <code>gh-pages</code> branch of a repo for a Project Page will be reflected on your live site.</li>
+                            <li>One option for updating your gh-pages branch with changes that have already been made to another branch is to merge branches.</li>
+                            <li><a href="https://help.github.com/articles/merging-branches" target="_blank">GitHub Help page for merging branches</a></li>
+                            <li>A Project Page can link to script, stylesheet, and other files on your User Page.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div class="vert-space-70 row">
+        <div class="foot col-sm-12">
+            <a href="#"><span class="glyphicon glyphicon-chevron-up"></span>Top</a>
+        </div>
+    </div>
+    <script src="Scripts/jquery-1.9.1.min.js"></script>
+    <script src="Scripts/bootstrap.js"></script>
+    <script src="Scripts/main.js"></script>
+</body>
+</html>
